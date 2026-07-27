@@ -1,0 +1,23 @@
+import java.util.function.Function;
+public class HigherOrderFunctionExample{
+    static void ProcessOrder(double order,Function<Double,Double>operation){
+        double result=operation.apply(order);
+        System.out.println("update order:"+result);
+    }
+        public static void main(String[] args){
+            double order=1000;
+            
+            //Add 10% discount 
+            ProcessOrder(order,o->o-(o*0.10));
+            
+            //Add 20% discount
+             ProcessOrder(order,o->o-(o*0.20));
+            
+            //No discount
+              ProcessOrder(order,o->o);
+        }
+    }
+OUPUT:
+update order:900.0
+update order:800.0
+update order:1000.0

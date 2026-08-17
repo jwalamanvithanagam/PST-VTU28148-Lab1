@@ -1,0 +1,16 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int[] unique = Arrays.stream(nums)
+                .filter((value) -> true)
+                .distinct()
+                .toArray();
+        for (int i = 0; i < unique.length; i++) {
+            nums[i] = unique[i];
+        }
+        return unique.length;
+    }
+}
+Input:
+nums = [0,0,1,1,1,2,2,3,3,4]
+Output:
+[0,1,2,3,4]

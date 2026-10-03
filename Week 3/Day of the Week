@@ -7,7 +7,8 @@ class Solution {
     }
 }
 Input
-day =
-31
-month =
-8
+day =31
+month =8
+year=2019
+Output:
+"saturday"

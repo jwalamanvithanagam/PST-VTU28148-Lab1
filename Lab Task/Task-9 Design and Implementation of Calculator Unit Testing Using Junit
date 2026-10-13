@@ -1,0 +1,30 @@
+Calculator.java:
+package com.example;
+public class Calculator {
+public int add(int a, int b) {
+return a + b;
+}
+public int divide(int a, int b) {
+return a / b;
+}
+}
+CalculatorTest.java (JUnit 5):
+package com.example;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+public class CalculatorTest {
+Calculator cal = new Calculator();
+@Test
+42
+void testAddition() {
+assertEquals(30, cal.add(10, 20));
+}
+@Test
+void testDivision() {
+assertEquals(5, cal.divide(10, 2));
+}
+}
+Input:
+10 + 20
+Test Result:
+Test Passed
